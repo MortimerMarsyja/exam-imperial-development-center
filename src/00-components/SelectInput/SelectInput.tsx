@@ -43,18 +43,15 @@ const SelectSortInput: FC<Props> = ({
 
   useEffect(() => {
     if (sort && sortBy) {
+      console.log({ sort, sortBy });
       onChange({ sort, sortBy });
     }
   }, [sort, sortBy]);
 
   return (
     <StyledSelectInput theme={theme} height={height} width={width}>
-      <button onClick={toggleSort}>
-        {sort === "asc" ? (
-          <Asc size={20} srokeC={themeColors.gray[800]} />
-        ) : (
-          <Desc size={20} srokeC={themeColors.gray[800]} />
-        )}
+      <button onClick={toggleSort} disabled={sortBy === "-"}>
+        {sort === "asc" ? <Asc size={20} /> : <Desc size={20} />}
       </button>
       <select
         id="sortBy"

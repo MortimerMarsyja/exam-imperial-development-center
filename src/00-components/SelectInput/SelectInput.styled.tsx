@@ -39,6 +39,10 @@ const StyledSelectInput = styled.div<Props>`
   button {
     background-color: transparent;
     border: none;
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
+    }
   }
 `;
 

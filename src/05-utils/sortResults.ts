@@ -5,6 +5,10 @@ export const sortResults = (
   onSort: (value: any[]) => void
 ) => {
   const reverse = order === "asc" ? 1 : -1;
+  if (sortBy === "-") {
+    onSort(results);
+    return;
+  }
   const sortedData = [...results].sort((a, b) => {
     if (a[sortBy] < b[sortBy]) {
       return -1 * reverse;

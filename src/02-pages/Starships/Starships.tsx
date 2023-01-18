@@ -23,7 +23,7 @@ const starshipsImgSRC = "src/06-assets/starships/";
 const sortOptions = [
   { value: "crew", label: "Crew" },
   { value: "cargo", label: "Cargo" },
-  { value: "", label: "" },
+  { value: "-", label: "" },
 ];
 
 interface Starship {
