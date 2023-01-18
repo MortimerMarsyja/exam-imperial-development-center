@@ -22,7 +22,7 @@ const starshipsImgSRC = "src/06-assets/starships/";
 
 const sortOptions = [
   { value: "crew", label: "Crew" },
-  { value: "cargo", label: "Cargo" },
+  { value: "cargo_capacity", label: "Cargo" },
   { value: "-", label: "" },
 ];
 
@@ -103,7 +103,7 @@ const Starships: FC = () => {
           <ul>
             <li>{starship.name}</li>
             <li>
-              <p>{starship.model}</p>
+              <p>{starship.cargo_capacity}</p>
             </li>
             <li>
               <p>{starship.manufacturer}</p>
