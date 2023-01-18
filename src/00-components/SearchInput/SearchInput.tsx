@@ -20,7 +20,7 @@ const SearchInput: FC<Props> = ({ width, height, onInput }) => {
     >
       <input
         type="text"
-        placeholder="Search a planet"
+        placeholder="Search"
         onChange={(e) => {
           setValue(e.target.value);
         }}

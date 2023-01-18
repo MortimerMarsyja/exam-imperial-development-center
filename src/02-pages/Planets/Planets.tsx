@@ -1,6 +1,5 @@
 // hooks
 import useFetch from "04-hooks/use-fetcher";
-import { useThemeContext } from "@contexts/themeContext";
 import { useEffect, useReducer, useState } from "react";
 import useSWR from "swr";
 // styles
@@ -29,7 +28,6 @@ const sortOptions = [
 
 const Planets = () => {
   const { fetcher } = useFetch();
-  const { theme } = useThemeContext();
   const [url, setUrl] = useState(`planets`);
   const { data } = useSWR(url, fetcher);
   const [state, dispatch] = useReducer(planetStateReducer, []);
@@ -69,13 +67,9 @@ const Planets = () => {
 
   return (
     <StyledPlanets>
-      <ComposedTitle
-        title="Planets"
-        subtitle="Imperial Destroyers Center"
-        theme={theme}
-      />
+      <ComposedTitle title="Planets" subtitle="Imperial Destroyers Center" />
       {state.planetList?.map((planet: any) => (
-        <Card theme={theme}>
+        <Card>
           <Image
             width={300}
             height={140}

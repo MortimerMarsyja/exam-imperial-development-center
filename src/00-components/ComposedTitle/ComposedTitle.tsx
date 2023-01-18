@@ -1,13 +1,14 @@
+import { useThemeContext } from "@contexts/themeContext";
 import { FC } from "react";
 import StyledComposedTitle from "./ComposedTitle.styled";
 
 interface Props {
-  theme: string;
   title: string;
   subtitle: string;
 }
 
-const ComposedTitle: FC<Props> = ({ theme, title, subtitle }) => {
+const ComposedTitle: FC<Props> = ({ title, subtitle }) => {
+  const { theme } = useThemeContext();
   return (
     <StyledComposedTitle theme={theme}>
       <h2>{subtitle}</h2>

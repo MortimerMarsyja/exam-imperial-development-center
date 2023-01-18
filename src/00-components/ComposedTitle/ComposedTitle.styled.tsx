@@ -13,14 +13,14 @@ const StyledComposedTitle = styled.div<Props>`
     font-weight: 700;
     margin: 0;
     color: ${({ theme }) =>
-      theme === "dark" ? themeColors.light : themeColors.dark};
+      theme === "dark" ? themeColors.red[700] : themeColors.dark};
   }
   h2 {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0;
     color: ${({ theme }) =>
-      theme === "dark" ? themeColors.light : themeColors.dark};
+      theme === "dark" ? themeColors.dark : themeColors.dark};
   }
 `;
 

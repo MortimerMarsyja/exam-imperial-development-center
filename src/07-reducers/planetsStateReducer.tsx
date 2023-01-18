@@ -1,11 +1,5 @@
 import reducerFunction from "@utils/reducerFunction";
 
-export function toastInit() {
-  return {
-    planetList: [],
-  };
-}
-
 export type PlanetListActions = "UPDATE_PLANET_LIST" | "FILTER_PLANET_LIST";
 
 export interface ActionInterface<Planet> {

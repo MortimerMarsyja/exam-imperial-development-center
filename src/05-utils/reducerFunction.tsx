@@ -1,13 +1,14 @@
 import { PlanetListActions } from "@reducers/planetsStateReducer";
 import { ToastActions } from "@reducers/toastReducer";
+import { StarshipActions } from "@reducers/starshipsReducer";
 
 interface ActionInterface {
-  type: PlanetListActions | PlanetListActions;
+  type: PlanetListActions | StarshipActions | ToastActions;
   payload?: any;
 }
 
 type CasesInterface = {
-  [key in PlanetListActions | ToastActions]: <S>(
+  [key in PlanetListActions | ToastActions | StarshipActions]: <S>(
     state: S,
     action: ActionInterface
   ) => S;

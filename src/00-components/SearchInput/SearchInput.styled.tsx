@@ -22,7 +22,9 @@ const StyledSearchInput = styled.form<Props>`
     width: 100%;
     height: 100%;
     border: none;
-    background-color: transparent;
+    border-radius: 12px;
+    background-color: ${({ theme }) =>
+      theme === "light" ? themeColors.gray[200] : themeColors.gray[700]};
     color: ${({ theme }) =>
       theme === "light" ? themeColors.dark : themeColors.light};
     font-size: 16px;

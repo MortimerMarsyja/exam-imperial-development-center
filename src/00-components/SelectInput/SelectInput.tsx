@@ -1,4 +1,7 @@
+import Asc from "@assets/icons/Asc";
+import Desc from "@assets/icons/Desc";
 import { useThemeContext } from "@contexts/themeContext";
+import themeColors from "@utils/theme";
 import { FC, useEffect, useState } from "react";
 import StyledSelectInput from "./SelectInput.styled";
 
@@ -46,7 +49,13 @@ const SelectSortInput: FC<Props> = ({
 
   return (
     <StyledSelectInput theme={theme} height={height} width={width}>
-      <input id="asc" name="asc" type="checkbox" onClick={toggleSort} />
+      <button onClick={toggleSort}>
+        {sort === "asc" ? (
+          <Asc size={20} srokeC={themeColors.gray[800]} />
+        ) : (
+          <Desc size={20} srokeC={themeColors.gray[800]} />
+        )}
+      </button>
       <select
         id="sortBy"
         onChange={(e) => setSortBy(e.target.value)}

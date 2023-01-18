@@ -32,6 +32,13 @@ const StyledSelectInput = styled.div<Props>`
     &:focus {
       outline: none;
     }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  button {
+    background-color: transparent;
+    border: none;
   }
 `;
 

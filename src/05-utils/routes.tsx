@@ -1,4 +1,5 @@
 import Planets from "@pages/Planets";
+import Starships from "@pages/Starships";
 
 export const routes = [
   {
@@ -18,7 +19,7 @@ export const routes = [
   },
   {
     path: "/starships",
-    element: <p>Starships</p>,
+    element: <Starships />,
     name: "Starships",
   },
 ];

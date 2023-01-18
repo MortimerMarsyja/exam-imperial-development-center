@@ -12,6 +12,7 @@ const StyledLeftControls = styled.div<Props>`
   justify-content: space-between;
   position: fixed;
   border-radius: 12px 12px 0 0;
+  left: 90px;
   align-items: center;
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
