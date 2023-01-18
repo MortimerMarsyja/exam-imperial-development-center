@@ -16,16 +16,6 @@ const Toast = ({
   toastTimeOut,
   toastType,
 }: Props) => {
-  console.log(
-    {
-      show,
-      hideToast,
-      children,
-      toastTimeOut,
-      toastType,
-    },
-    "toast component data"
-  );
   const [node] = useState(document.createElement("div"));
 
   const removeNode = () => {
@@ -33,18 +23,19 @@ const Toast = ({
       document.querySelector("#toast")?.childNodes[0].remove();
     }
   };
+
   const handleToastType = () => {
     switch (toastType) {
       case "success":
-        return "bg-green-500";
+        return "green";
       case "error":
-        return "bg-red-500";
+        return "red";
       case "warning":
-        return "bg-yellow-500";
+        return "yellow";
       case "info":
-        return "bg-blue-500";
+        return "blue";
       default:
-        return "bg-green-500";
+        return "green";
     }
   };
 
@@ -53,16 +44,7 @@ const Toast = ({
       document
         .querySelector("#toast")
         ?.appendChild(node)
-        .classList.add(
-          "rounded-md",
-          "text-white",
-          "p-4",
-          "m-4",
-          "fixed",
-          "bottom-0",
-          "right-0",
-          handleToastType()
-        );
+        .classList.add("show", handleToastType());
       setTimeout(() => {
         removeNode();
         hideToast();

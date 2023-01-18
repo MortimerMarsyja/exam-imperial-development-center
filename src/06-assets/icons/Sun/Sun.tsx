@@ -1,11 +1,12 @@
 interface Props {
   strokeColor?: string;
+  size?: number;
 }
 
-const Sun = ({ strokeColor }: Props): JSX.Element => (
+const Sun = ({ strokeColor, size = 28 }: Props): JSX.Element => (
   <svg
-    width={28}
-    height={28}
+    width={size}
+    height={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 28 28"
   >

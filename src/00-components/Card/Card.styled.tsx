@@ -1,0 +1,34 @@
+import themeColors from "@utils/theme";
+import styled from "styled-components";
+
+interface Props {
+  theme: string;
+}
+
+const StyledCard = styled.div<Props>`
+  background-color: ${({ theme }) =>
+    theme === "dark" ? themeColors.dark : themeColors.light};
+  border-radius: 0.5rem;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding-bottom: 1rem;
+  margin: 1rem;
+  color: ${({ theme }) =>
+    theme === "dark" ? themeColors.light : themeColors.dark};
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 6px;
+    li {
+      height: 16px;
+      padding: 0.2rem 0.8rem;
+      p {
+        font-size: small;
+      }
+    }
+  }
+`;
+
+export default StyledCard;

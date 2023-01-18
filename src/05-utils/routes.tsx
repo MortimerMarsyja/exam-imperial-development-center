@@ -1,16 +1,24 @@
-import ComponentsShowcase from "@pages/ComponentsShowcase";
-import Landing from "@pages/Landing";
-
+import Planets from "@pages/Planets";
 
 export const routes = [
   {
     path: "/",
-    element: <Landing />,
-    name: "Landing"
+    element: <Planets />,
+    name: "Planets",
   },
   {
-    path: "/components",
-    element: <ComponentsShowcase />,
-    name: 'Components'
-  }
-]
+    path: "/people",
+    element: <p>People</p>,
+    name: "People",
+  },
+  {
+    path: "/vehicles",
+    element: <p>Vehicles</p>,
+    name: "Vehicles",
+  },
+  {
+    path: "/starships",
+    element: <p>Starships</p>,
+    name: "Starships",
+  },
+];
