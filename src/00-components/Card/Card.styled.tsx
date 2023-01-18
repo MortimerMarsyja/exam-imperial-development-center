@@ -26,9 +26,18 @@ const StyledCard = styled.div<Props>`
       height: 16px;
       padding: 0.2rem 0.8rem;
       p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis ellipsis;
         font-size: small;
       }
     }
+  }
+  @media (max-width: 500px) {
+    width: 200px;
+  }
+  @media (max-width: 365px) {
+    width: 184px;
   }
 `;
 

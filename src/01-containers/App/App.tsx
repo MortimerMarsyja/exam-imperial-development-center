@@ -1,5 +1,3 @@
-// styles
-import GlobalStyles from "globalStyles";
 // utils
 import { routes } from "@utils/routes";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
@@ -8,19 +6,19 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import SideNav from "@components/SideNav";
 // containers
+import GlobalContainer from "@containers/GlobalContainer";
 import NotFound from "@pages/NotFound";
 // providers
 import { ToastContentProvider } from "@contexts/toastContext";
-import { ThemeProvider, useThemeContext } from "@contexts/themeContext";
+import { ThemeProvider } from "@contexts/themeContext";
 
 const App = (): JSX.Element => {
-  const { theme } = useThemeContext();
   return (
     <div>
       <ThemeProvider>
         <ToastContentProvider>
           <BrowserRouter>
-            <GlobalStyles theme={theme} />
+            <GlobalContainer />
             <Navbar />
             <div className="page-layout">
               <SideNav />

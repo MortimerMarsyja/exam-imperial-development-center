@@ -128,7 +128,13 @@ const Starships: FC = () => {
         <SelectSortInput
           onChange={({ sort, sortBy }) =>
             state.starshipList
-              ? sortResults(state.starshipList, sortBy, sort, handleOnSort)
+              ? sortResults(
+                  state.starshipList,
+                  sortBy,
+                  sort,
+                  handleOnSort,
+                  () => setUrl("starships")
+                )
               : () => {}
           }
           options={sortOptions}

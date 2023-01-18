@@ -2,11 +2,12 @@ export const sortResults = (
   results: any[],
   sortBy: string,
   order: "asc" | "desc",
-  onSort: (value: any[]) => void
+  onSort: (value: any[]) => void,
+  resetFunc: () => void
 ) => {
   const reverse = order === "asc" ? 1 : -1;
   if (sortBy === "-") {
-    onSort(results);
+    resetFunc();
     return;
   }
   const sortedData = [...results].sort((a, b) => {

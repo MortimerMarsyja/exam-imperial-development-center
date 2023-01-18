@@ -118,7 +118,9 @@ const Planets = () => {
         <SelectSortInput
           onChange={({ sort, sortBy }) =>
             state.planetList
-              ? sortResults(state.planetList, sortBy, sort, handleOnSort)
+              ? sortResults(state.planetList, sortBy, sort, handleOnSort, () =>
+                  setUrl("planets")
+                )
               : () => {}
           }
           options={sortOptions}
