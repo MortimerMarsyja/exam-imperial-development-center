@@ -36,6 +36,10 @@ const StyledSideNav = styled.div<Props>`
   .logo-container {
     margin-top: 2em;
   }
+  @media (max-width: 360px) {
+    width: 30px;
+    overflow: hidden;
+  }
 `;
 
 export default StyledSideNav;

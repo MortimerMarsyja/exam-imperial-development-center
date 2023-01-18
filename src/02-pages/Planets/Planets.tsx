@@ -16,7 +16,7 @@ import { planetStateReducer } from "@reducers/planetsStateReducer";
 import { formatImage } from "@utils/formatImage";
 import { sortResults } from "@utils/sortResults";
 import SelectSortInput from "@components/SelectInput";
-import LeftControls from "@components/LeftControls";
+import BottomControls from "@components/BottomControls";
 
 const planetsUrl = "src/06-assets/planets/";
 
@@ -102,7 +102,7 @@ const Planets = () => {
         handleNextPage={handleNextPage}
         elementsPerPage={10}
       />
-      <LeftControls width={400} height={50}>
+      <BottomControls width={400} height={50}>
         <SearchInput
           width={120}
           height={30}
@@ -126,7 +126,7 @@ const Planets = () => {
           height={30}
           label={"sort"}
         />
-      </LeftControls>
+      </BottomControls>
     </StyledPlanets>
   );
 };

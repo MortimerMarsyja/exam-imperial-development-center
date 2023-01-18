@@ -43,6 +43,12 @@ const GlobalStyles = createGlobalStyle<Props>`
     animation: toast 0.5s ease-in-out;
     }
   }
+  @media (max-width: 360px) {
+    .page-content{
+    margin-left: 90px;
+    }
+  }
+  
 `;
 
 export default GlobalStyles;

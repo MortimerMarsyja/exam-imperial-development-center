@@ -2,7 +2,6 @@
 import Card from "@components/Card";
 import Image from "@components/Image";
 import ComposedTitle from "@components/ComposedTitle";
-import LeftControls from "@components/LeftControls";
 import Pagination from "@components/Pagination";
 import SearchInput from "@components/SearchInput";
 import SelectSortInput from "@components/SelectInput";
@@ -17,13 +16,14 @@ import { FC, useEffect, useReducer, useState } from "react";
 import StyledStarships from "./Starships.styled";
 //reducers
 import { starshipStateReducer } from "@reducers/starshipsReducer";
+import BottomControls from "@components/BottomControls";
 
 const starshipsImgSRC = "src/06-assets/starships/";
 
 const sortOptions = [
+  { value: "-", label: "" },
   { value: "crew", label: "Crew" },
   { value: "cargo_capacity", label: "Cargo" },
-  { value: "-", label: "" },
 ];
 
 interface Starship {
@@ -111,17 +111,8 @@ const Starships: FC = () => {
           </ul>
         </Card>
       ))}
-      <Pagination
-        current={page}
-        total={data?.count}
-        previous={data?.previous}
-        next={data?.next}
-        loading={data === undefined}
-        handlePrevPage={handlePrevPage}
-        handleNextPage={handleNextPage}
-        elementsPerPage={10}
-      />
-      <LeftControls width={400} height={50}>
+
+      <BottomControls width={400} height={50}>
         <SearchInput
           width={120}
           height={30}
@@ -145,7 +136,17 @@ const Starships: FC = () => {
           height={30}
           label={"sort"}
         />
-      </LeftControls>
+        <Pagination
+          current={page}
+          total={data?.count}
+          previous={data?.previous}
+          next={data?.next}
+          loading={data === undefined}
+          handlePrevPage={handlePrevPage}
+          handleNextPage={handleNextPage}
+          elementsPerPage={10}
+        />
+      </BottomControls>
     </StyledStarships>
   );
 };

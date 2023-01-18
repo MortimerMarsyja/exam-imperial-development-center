@@ -16,13 +16,13 @@ const StyledSearchInput = styled.form<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 20px;
+  padding: 6px 12px;
   border-radius: 12px;
   input {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 12px;
+    border-radius: 6px;
     background-color: ${({ theme }) =>
       theme === "light" ? themeColors.gray[200] : themeColors.gray[700]};
     color: ${({ theme }) =>

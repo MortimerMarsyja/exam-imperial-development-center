@@ -17,13 +17,15 @@ const StyledSelectInput = styled.div<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 20px;
+  padding: 6px 12px;
   border-radius: 12px;
   select {
     width: 100%;
     height: 100%;
     border: none;
-    background-color: transparent;
+    background-color: ${({ theme }) =>
+      theme === "light" ? themeColors.gray[200] : themeColors.gray[700]};
+    border-radius: 6px;
     color: ${({ theme }) =>
       theme === "light" ? themeColors.dark : themeColors.light};
     font-size: 16px;

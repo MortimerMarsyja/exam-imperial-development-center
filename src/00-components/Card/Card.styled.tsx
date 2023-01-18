@@ -22,6 +22,7 @@ const StyledCard = styled.div<Props>`
     padding: 0;
     margin-top: 6px;
     li {
+      overflow: hidden;
       height: 16px;
       padding: 0.2rem 0.8rem;
       p {
