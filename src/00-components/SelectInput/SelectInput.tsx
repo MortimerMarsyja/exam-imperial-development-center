@@ -43,7 +43,6 @@ const SelectSortInput: FC<Props> = ({
 
   useEffect(() => {
     if (sort && sortBy) {
-      console.log({ sort, sortBy });
       onChange({ sort, sortBy });
     }
   }, [sort, sortBy]);

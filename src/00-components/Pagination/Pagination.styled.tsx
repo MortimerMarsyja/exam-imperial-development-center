@@ -20,8 +20,6 @@ export const StyledPagination = styled.div`
       background-color: transparent;
       border: none;
       cursor: pointer;
-      font-size: 1.5rem;
-      font-weight: 700;
       color: ${({ theme }) =>
         theme === "dark" ? themeColors.light : themeColors.dark};
       &:disabled {

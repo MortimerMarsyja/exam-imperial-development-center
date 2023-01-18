@@ -63,7 +63,6 @@ const Starships: FC = () => {
       });
     }
   }, [data]);
-  console.log(state, "dame el estado de starship");
   const handlePrevPage = (prev: null | string) => {
     if (prev) {
       setPage(page - 1);
