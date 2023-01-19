@@ -1,8 +1,12 @@
-import Checkbox from "../00-components/Checkbox";
+import Card from "@components/Card";
 import { render } from "@testing-library/react";
 
-describe("Checkbox", () => {
+describe("Card", () => {
   it("renders without crashing", () => {
-    render(<Checkbox onChange={() => {}} label="test" />);
+    render(
+      <Card>
+        <p>test not to crush</p>
+      </Card>
+    );
   });
 });

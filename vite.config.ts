@@ -1,6 +1,7 @@
 import { mergeConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 import tsconfigPaths from "vite-tsconfig-paths";
+import react from "@vitejs/plugin-react";
 
 const ASSET_URL = process.env.ASSET_URL || "";
 
@@ -16,7 +17,12 @@ export default {
     host: "localhost",
     port: 3000,
   },
-  plugins: [svgr(), tsconfigPaths()],
+  test: {
+    globals: true,
+    environment: "happy-dom",
+    setupFiles: ["src/setupTest.ts"],
+  },
+  plugins: [svgr(), tsconfigPaths(), react()],
   async viteFinal(config) {
     // Merge custom configuration into the default config
     return mergeConfig(config, {
