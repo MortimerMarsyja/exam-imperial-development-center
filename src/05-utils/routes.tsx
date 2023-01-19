@@ -2,8 +2,10 @@ import Planet from "@assets/icons/Planet";
 import Starship from "@assets/icons/Starship";
 import StormTrooper from "@assets/icons/StormTrooper";
 import Vehicle from "@assets/icons/Vehicle";
+import People from "@pages/People";
 import Planets from "@pages/Planets";
 import Starships from "@pages/Starships";
+import Vehicles from "@pages/Vehicles";
 
 export const routes = [
   {
@@ -14,13 +16,13 @@ export const routes = [
   },
   {
     path: "/people",
-    element: <p>People</p>,
+    element: <People />,
     name: "People",
     icon: <StormTrooper size={16} />,
   },
   {
     path: "/vehicles",
-    element: <p>Vehicles</p>,
+    element: <Vehicles />,
     name: "Vehicles",
     icon: <Vehicle size={16} />,
   },
