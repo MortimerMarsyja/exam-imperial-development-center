@@ -27,7 +27,7 @@
       "@reducers/*": ["07-reducers/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "./setupTest.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"

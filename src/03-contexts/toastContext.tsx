@@ -14,12 +14,6 @@ type ModalContextType = {
   hideToast: () => void;
 };
 
-interface PayloadInterface {
-  content: React.ReactNode | null;
-  type: ToastType;
-  show: boolean;
-}
-
 export const ToastContentContext = createContext<ModalContextType>({
   showToast: () => {},
   hideToast: () => {},
@@ -43,10 +37,10 @@ export const ToastContentProvider = ({ children }: ProviderProps) => {
     <ToastContentContext.Provider value={{ hideToast, showToast }}>
       {children}
       <Toast
-        show={state.show}
-        toastType={state.type}
+        show={state?.show}
+        toastType={state?.type}
         hideToast={hideToast}
-        children={state.content}
+        children={state?.content}
         toastTimeOut={1200}
       />
     </ToastContentContext.Provider>
