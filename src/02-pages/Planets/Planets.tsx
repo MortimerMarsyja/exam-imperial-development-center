@@ -92,16 +92,7 @@ const Planets = () => {
           </ul>
         </Card>
       ))}
-      <Pagination
-        current={page}
-        total={data?.count}
-        previous={data?.previous}
-        next={data?.next}
-        loading={data === undefined}
-        handlePrevPage={handlePrevPage}
-        handleNextPage={handleNextPage}
-        elementsPerPage={10}
-      />
+
       <BottomControls width={400} height={50}>
         <SearchInput
           width={120}
@@ -127,6 +118,16 @@ const Planets = () => {
           width={120}
           height={30}
           label={"sort"}
+        />
+        <Pagination
+          current={page}
+          total={data?.count}
+          previous={data?.previous}
+          next={data?.next}
+          loading={data === undefined}
+          handlePrevPage={handlePrevPage}
+          handleNextPage={handleNextPage}
+          elementsPerPage={10}
         />
       </BottomControls>
     </StyledPlanets>
