@@ -22,6 +22,10 @@ const StyledComposedTitle = styled.div<Props>`
     color: ${({ theme }) =>
       theme === "dark" ? themeColors.light : themeColors.dark};
   }
+  @media (max-width: 500px) {
+    width: 140px;
+    margin-left: 24px;
+  }
 `;
 
 export default StyledComposedTitle;

@@ -22,23 +22,36 @@ const StyledSideNav = styled.div<Props>`
   .links {
     margin-top: 2em;
     display: flex;
+    width: 106px;
     flex-direction: column;
     a {
+      display: flex;
+      justify-content: space-around;
       color: ${({ theme }) =>
         theme === "dark" ? themeColors.light : themeColors.dark};
       text-decoration: none;
       margin-bottom: 1rem;
       &.active {
         text-decoration: underline;
+
+        svg {
+          stroke: ${({ theme }) =>
+            theme === "dark" ? themeColors.red[500] : themeColors.red[500]};
+          fill: ${({ theme }) =>
+            theme === "dark" ? themeColors.red[500] : themeColors.red[500]};
+        }
       }
     }
   }
   .logo-container {
     margin-top: 2em;
   }
-  @media (max-width: 360px) {
+  @media (max-width: 380px) {
     width: 30px;
     overflow: hidden;
+    .route-name {
+      display: none;
+    }
   }
 `;
 

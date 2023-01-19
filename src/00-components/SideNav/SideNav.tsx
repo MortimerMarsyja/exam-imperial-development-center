@@ -25,7 +25,8 @@ const SideNav: FC<Props> = () => {
             className={`${route.path === location.pathname ? "active" : ""}`}
             to={route.path}
           >
-            <p>{route.name}</p>
+            <p className="route-name">{route.name}</p>
+            {route.icon && <p>{route.icon}</p>}
           </Link>
         ))}
       </div>
